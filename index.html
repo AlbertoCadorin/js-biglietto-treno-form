@@ -5,23 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- foglio css boot-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>bigliietto treno con form</title>
+    <title>biglietto treno con form</title>
 </head>
-<body>
-    
-    <form action="./index.html" id="my-form">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Inserisci quanti km devi percorrere</label>
-          <input type="text" class="form-control" id="new-km" placeholder="Inserisci km">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Inserisci un task</label>
-          <input type="text" class="form-control" id="new-age" placeholder="Inserisci eta">
-        </div>
-        <input type="submit" name="" value="Invia" id="butt">
-    </form>
+<body class="bg-warning">
+    <main class="container mt-4">
+        <!--titolo-->
+        <h3 class="text-center mb-4">Crea il tuo biglietto</h3>
+        <div>
+            <form action="./index.html" id="my-form" class="row bg-white mb-4 p-4 border rounded-4">
+                <div class="mb-3 col-4">
+                    <label for="new-user" class="form-label">Inserisci Nome e Cognome</label>
+                    <input type="text" class="form-control" id="new-user" placeholder="Inserisci km">
+                  </div>
+                <!--inserisci km-->
+                <div class="mb-3 col-4">
+                  <label for="new-km" class="form-label">Inserisci quanti km devi percorrere</label>
+                  <input type="text" class="form-control" id="new-km" placeholder="Inserisci km">
+                </div>
+                <!--inserisci età-->
+                <div class="mb-3 col-4">
+                  <label for="new-age" class="form-label">Inserisci la tua età</label>
+                  <input type="text" class="form-control" id="new-age" placeholder="Inserisci eta">
+                </div>
+                <!--bottoni crea/annulla-->
+                <div class="my-5 d-flex justify-content-center">
+                    <button type="submit" id="butt-on" class="btn btn-primary col-3 me-2">Crea</button>
+                    <button type="submit" id="butt-off" class="btn btn-primary col-3">Annulla</button>
+                </div>
+            </form>
+            <div id="biglietto-finale" class="info-ticket">
+                <h3 class="text-center mb-4">il tuo biglietto</h3>
+                <div class="container text-center bg-white p-4 border rounded-4" id="biglietto">
+                    <div class="row">
+                      <div class="col">
+                        <p>Nome e Cognome</p>
+                        <p id="user-info"></p>
+                      </div>
+                      <div class="col">
+                        <p>km da fare</p>
+                        <p id="km-info"></p>
+                      </div>
+                      <div class="col">
+                        <p>annni passegero</p>
+                        <p id="age-info"></p>
+                      </div>
+                      <div class="col">
+                        <p>prezzo biglietto</p>
+                        <p id="price-info"></p>
+                      </div>
+                    </div>
+                  </div>
 
-
+            </div>
+        </div>
+    </main>
     <script src="js/app.js"></script>
 </body>
 </html>
